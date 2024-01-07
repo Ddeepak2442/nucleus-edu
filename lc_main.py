@@ -103,17 +103,17 @@ if prompt := st.chat_input():
         st.session_state.messages.append(AIMessage(content=response[chain.output_key]))
         run_id = response["__run"].run_id
 
-        col_blank, col_text, col1, col2 = st.columns([1, 2, 1, 1])
+        # col_blank, col_text, col1, col2 = st.columns([1, 2, 1, 1])
         
-        # with col_option:
-        #     st.button('Explain this topic in brief')
+        # # with col_option:
+        # #     st.button('Explain this topic in brief')
 
-        with col_text:
-            st.text("Feedback:")
+        # with col_text:
+        #     st.text("Feedback:")
 
-        with col1:
-            st.button("👍", on_click=send_feedback, args=(run_id, 1))
+        # with col1:
+        #     st.button("👍", on_click=send_feedback, args=(run_id, 1))
 
-        with col2:
-            st.button("👎", on_click=send_feedback, args=(run_id, 0))
+        # with col2:
+        #     st.button("👎", on_click=send_feedback, args=(run_id, 0))
 
